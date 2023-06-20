@@ -1,0 +1,75 @@
+appId: com.fastemulator.gbafree
+env: 
+  START: "53%,80%"
+  A: "85%,63%"
+  B: "63%,63%"
+  UP: "23%,57%"
+  RIGHT: "36%,64%"
+  DOWN: "9%,63%"
+  LEFT: "21%,69%"
+---
+- launchApp
+- swipe:
+    direction: LEFT
+    duration: 2000
+- tapOn: "firered.gba"
+# wait a second for gba intro
+- tapOn:
+    point: ${START}
+# proceed past title screen
+- tapOn:
+    point: ${START}
+- tapOn:
+    point: ${START}
+# wait a few seconds for transition to continue/new game screen
+- tapOn:
+    point: ${A}
+- tapOn:
+    point: ${A}
+# press continue game
+- tapOn:
+    point: ${A}
+- tapOn:
+    point: ${A}
+# wait for game load
+- swipe:
+    direction: UP
+    duration: 2000
+# walk around tv
+- tapOn:
+    point: ${LEFT}
+- tapOn:
+    point: ${UP}
+- tapOn:
+    point: ${UP}
+- tapOn:
+    point: ${UP}
+- tapOn:
+    point: ${RIGHT} 
+- tapOn:
+    point: ${RIGHT} 
+- tapOn:
+    point: ${DOWN} 
+- tapOn:
+    point: ${DOWN} 
+- tapOn:
+    point: ${DOWN} 
+# open start menu
+- tapOn:
+    point: ${START} 
+
+
+
+
+
+
+# start button point: "53%,80%"
+# A button point: "85%,63%"
+# B button point: "63%,63%"
+# up button point: "23%,57%"
+# right button point: "36%,64%"
+# down button point: "9%,63%"
+# left button point: "21%,69%"
+# maestro studio
+# use JS for waiting
+
