@@ -1,11 +1,21 @@
 # poke-mation
-Combining test automation with pokemon
+Combining automation tools with playing pokemon
 
-Change of tactic! After much failure, or no success rather, using AppleScript or Shortcuts on Mac, I have diverted a more suitable path in maestro. 
+Below is a list of tools I've attempted automating playthroughs for Pokemon Firered so far.
 
-Using maestro and hardcoding on-screen button coordinates.
+### Maestro
 
-## pre-requisites
+Maestro is a test automation tool that provides easy interaction with mobile devices. Interaction is driven by commands written in YAML. 
+
+#### Requires
 - android studio, adb
-- maestro
-- pokemon firered
+
+Review: https://alexander.ghost.io/a-wild-automation-challenge-appeared/
+
+### Skyemu
+
+Skyemu is a GBA emulator that allows a local server to receive input commands sent by code. Using this method, we can send a sequence of commands to perform game actions. These commands are written in python.
+
+#### Requires
+- https://github.com/skylersaleh/SkyEmu
+- python for running local server & sending commands to emulator
