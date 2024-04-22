@@ -1,7 +1,5 @@
 import requests
 import time
-
-# "/Applications/SkyEmu.app/Contents/MacOS/SkyEmu" http_server 8080 "/Users/Alex/Downloads/Pokemon - FireRed Version (USA, Europe) (Rev 1).gba"
 delayBetweenStairs = 1.5
 delayToExitBuilding = 2
 
@@ -76,6 +74,7 @@ def dialogBox(button):
 
 # add 0.5s delay after each dialog box to finish reading
 def dialogue_first_professor():
+    print(navigate_from_home_to_first_grass.__name__)
     dialogBox("A")
     # wait for professor to finish walking to grass
     time.sleep(4)
@@ -84,6 +83,7 @@ def dialogue_first_professor():
     dialogBox("A")
 
 def firstLabDialogue():
+    print(navigate_from_home_to_first_grass.__name__)
     # walk back to lab and join Gary
     time.sleep(7)
     #  need to add checkpoints to the below button presses
@@ -100,8 +100,10 @@ def firstLabDialogue():
     dialogBox("A")
     dialogBox("A")
     dialogBox("A")
+    dialogBox("A")
 
 def selectStarterSequence():
+    print(navigate_from_home_to_first_grass.__name__)
     pressButton("Down")
     pressButton("Down")
     pressButton("Right")
@@ -136,6 +138,3 @@ if __name__ == "__main__":
     dialogue_first_professor()
     firstLabDialogue()
     selectStarterSequence()
-
-# response = requests.get(url)
-# print(response.text)
